@@ -29,11 +29,12 @@
     5 Leer documentacion: https://nextjs.org/docs/api-reference/next/image
     6 Las imagenes tienen que estar dentro de la carpeta de public puesto next por defecto genera las paginas de manera estatica
     7 Para permiter imagenes en paginas que no sea de forma dinamica hay que permitir el domino de donde el cual se quiere obtener las imagenes
+    8 Optimizacion de imagen: https://nextjs.org/docs/messages/sharp-missing-in-production
 
 ## GetSaticProps
 
-    1 Si queremos tener el mejor rendimiento tenemos que usar la tecnica SSG: Static-site generation, puesto que de esta forma las paginas ya estan construidas y el servido solo tiene que servir la pagina corespondiente al request.
-    2 Haba momentos donde la tecnica SSR: Server-side rendering sera ultil por que tal el cliente necesite ver unos cambios en vivo.
+    1 Si queremos tener el mejor rendimiento tenemos que usar la tecnica SSG: Static-site generation, puesto que de esta forma las paginas ya estan construidas y el servidor solo tiene que servir la pagina corespondiente al request.
+    2 Habra momentos donde la tecnica SSR: Server-side rendering sera ultil por que tal el cliente necesite ver unos cambios en vivo.
     3 Para el ejemplo de esta aplicacion estamos usando el SSG puesto que de antemano sabemos que informacion vamos a servir.
     4 La funcion GetSaticProps solo se va a ejecutar del lado del servidor al momento de hacer el build
     5 La funcion getStaticProps te permite pasar props a las paginas de next.
@@ -55,6 +56,9 @@
         1 Deberías usar getStaticPaths si estás pre-renderizando estáticamente páginas que usan rutas dinámicas
         2 Leer documentacion: https://nextjs.org/docs/basic-features/data-fetching/get-static-paths
         3 Al usar las funciones como getStaticPaths o getstaticProps se tiene que tener cuidado con la informacion que se maneja.Se tiene que trabajar con la data necesaria que se va a usar.
+
+    ## Incremental Static Regeneration
+        1 leer documentacion: https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration
 
     ## Tips:
         1 Las aplicaciones de next corren tanto en el backend como en el front por lo tanto puede generar error.
